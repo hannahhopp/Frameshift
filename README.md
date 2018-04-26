@@ -45,4 +45,8 @@
   2. Frontend routes (gallery, single dream, create dream form)
   3. Gallery of dreams by end of today
 
+## TO DOS ##
+>> Dream dates
+- Want to give option to change the date the dream was had.
+
 

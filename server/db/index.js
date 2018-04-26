@@ -1,7 +1,17 @@
 const db = require('./db');
-const Dream = require('./dream');
+const {
+  Dream,
+  STANDARD,
+  VIVID,
+  LUCID,
+  NIGHTMARE
+} = require('./dream');
 
 module.exports = {
   db,
-  Dream
+  Dream,
+  STANDARD,
+  VIVID,
+  LUCID,
+  NIGHTMARE
 }

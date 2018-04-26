@@ -1,6 +1,11 @@
 const Sequelize = require('sequelize');
 const db = require('./db');
 
+const STANDARD = 'STANDARD';
+const VIVID = 'VIVID';
+const LUCID = 'LUCID';
+const NIGHTMARE = 'NIGHTMARE';
+
 const Dream = db.define('dream', {
   title: {
     type: Sequelize.STRING,
@@ -9,13 +14,9 @@ const Dream = db.define('dream', {
       notEmpty: true
     }
   },
-  dreamDate: {
-    type: Sequelize.DATE,
-    defaultValue: Sequelize.NOW
-  },
   dreamType: {
-    type: Sequelize.ENUM('STANDARD', 'VIVID', 'LUCID', 'NIGHTMARE'),
-    defaultValue: 'STANDARD',
+    type: Sequelize.ENUM(STANDARD, VIVID, LUCID, NIGHTMARE),
+    defaultValue: STANDARD,
     allowNull: false
   },
   dream: {
@@ -27,4 +28,4 @@ const Dream = db.define('dream', {
   }
 });
 
-module.exports = Dream;
+module.exports = { Dream, STANDARD, VIVID, LUCID, NIGHTMARE };
