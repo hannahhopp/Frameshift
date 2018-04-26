@@ -39,6 +39,10 @@
 - Sentiment analysis: sentiment node package? google-cloud-prediction-cli?
 - Image generator: Probably start with some pre-made images, combine with varying opacities and encode new jpeg file?...
   - Maybe JIMP? Yeah... cool. It has a bunch of functionality and I can edit premade images!
+- Anime-js is pretty. <-- FLUFF -->
 - Found my transcribed dreams! Now to make a database...
+  1. Create backend routes
+  2. Frontend routes (gallery, single dream, create dream form)
+  3. Gallery of dreams by end of today
 
 
