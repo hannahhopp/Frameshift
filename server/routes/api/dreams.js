@@ -44,3 +44,18 @@ router.put('/:id', async (req, res, next) => {
     next(err);
   }
 });
+
+router.delete('/:id', async (req, res, next) => {
+  try {
+    await Dream.findById(req.params.id)
+      .then(dream => {
+        dream.destroy();
+      })
+      .then(() => {
+        res.statusMessage = 'No Content';
+        res.sendStatus(204);
+      });
+  } catch (err) {
+    next(err);
+  }
+})
