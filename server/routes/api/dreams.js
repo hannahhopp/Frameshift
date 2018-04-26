@@ -35,7 +35,7 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router.pug('/:id', async (req, res, next) => {
+router.put('/:id', async (req, res, next) => {
   try {
     const dream = await Dream.findById(req.params.id);
     const updatedDream = await dream.update(req.body);
