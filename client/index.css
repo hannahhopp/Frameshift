@@ -1,5 +1,35 @@
 body {
   font-family: 'Nanum Gothic', sans-serif;
   color: white;
-  background-color: darkslategrey;
+  background-color: rgb(18, 22, 38);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  min-height: 100%;
+  background-image: url("/dreams.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* HOME PAGE */
+.home-page {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.entrance {
+  position: relative;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+  transition: opacity 0.6s;
+}
+
+.entrance:hover {
+  opacity: 0.5;
 }
