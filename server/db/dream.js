@@ -25,6 +25,10 @@ const Dream = db.define('dream', {
     validate: {
       notEmpty: true
     }
+  },
+  imageUrl: {
+    type: Sequelize.STRING,
+    defaultValue: '/standard.jpg',
   }
 });
 
