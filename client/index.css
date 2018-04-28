@@ -10,7 +10,15 @@ body {
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
-  letter-spacing: 0.05em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
 }
 
 .main {
@@ -75,7 +83,7 @@ body {
 .dream {
   background: black;
   opacity: 0.75;
-  padding: 2em 4em;
+  padding: 2em 7em;
 }
 
 .dream-header {
@@ -84,4 +92,5 @@ body {
 
 .dream-text {
   text-align: justify;
+  line-height: 1.4em;
 }
