@@ -84,6 +84,9 @@ a:hover {
   background: black;
   opacity: 0.75;
   padding: 2em 7em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .dream-header {
@@ -93,4 +96,14 @@ a:hover {
 .dream-text {
   text-align: justify;
   line-height: 1.4em;
+}
+
+.word-boxes {
+  display: flex;
+}
+
+.word-box {
+  width: 20em;
+  margin: 2em;
+  text-align: center;
 }

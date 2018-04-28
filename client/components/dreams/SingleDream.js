@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import Words from './Words';
 
-const SingleDream = (props) =>  {
-  const { dream } = props;
-  return !dream.title
-    ? (
-      <h1>Loading</h1>
-    ) : (
-      <div className="dream">
-        <div className="dream-header">
-          <h1>{ dream.title }</h1>
-          <h2>{ dream.dreamType.toLowerCase() }</h2>
+class SingleDream extends Component {
+
+  splitParagraph (dream) {
+    return dream.split('\n').map((p, i) => (
+      <p key={i} className="dream-text">{p}</p>
+    ));
+  }
+
+  render () {
+    const { dream } = this.props;
+    const { splitParagraph } = this;
+    return !dream.title
+      ? (
+        <h1>Loading</h1>
+      ) : (
+        <div className="dream">
+          <div className="dream-header">
+            <h1>{ dream.title }</h1>
+            <h2>{ dream.dreamType.toLowerCase() }</h2>
+          </div>
+          <div className="dream-text-container">
+            { splitParagraph(dream.dream) }
+          </div>
+          <Words dream={ dream } />
         </div>
-        <div className="dream-text-container">
-          <p className="dream-text">
-          {
-            dream.dream.split('\n').map(par => (
-                <div>
-                  {par}<br/>
-                </div>
-              )
-            )
-          }
-          </p>
-        </div>
-      </div>
-    );
+      );
+  }
 }
 
 const mapStateToProps = (state, ownProps) => {
