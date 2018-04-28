@@ -10,7 +10,6 @@ body {
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
-  letter-spacing: 0.05em;
 }
 
 a {
@@ -84,7 +83,7 @@ a:hover {
 .dream {
   background: black;
   opacity: 0.75;
-  padding: 2em 4em;
+  padding: 2em 7em;
 }
 
 .dream-header {
@@ -93,4 +92,5 @@ a:hover {
 
 .dream-text {
   text-align: justify;
+  line-height: 1.4em;
 }

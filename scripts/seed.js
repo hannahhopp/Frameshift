@@ -1,12 +1,23 @@
 const { db, Dream } = require('../server/db');
 const dreams = require('./dreams');
+const Sentiment = require('sentiment');
+const sentiment = new Sentiment();
 
 const seed = async () => {
   await db.sync({ force: true });
   console.log('db synced!');
+  console.log('sentiment analysis...');
+  const analyzedDreams = dreams.map(dream => {
+    let analysis = sentiment.analyze(dream.dream);
+    return {
+      ...dream,
+      ...analysis
+    };
+  });
+  console.log('analysis complete!');
 
   await Promise.all(
-    dreams.map(dream => {
+    analyzedDreams.map(dream => {
       dream.imageUrl = `/${dream.dreamType.toLowerCase()}.jpg`;
       return Dream.create(dream);
     })

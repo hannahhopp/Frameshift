@@ -29,6 +29,21 @@ const Dream = db.define('dream', {
   imageUrl: {
     type: Sequelize.STRING,
     defaultValue: '/standard.jpg',
+  },
+  score: {
+    type: Sequelize.FLOAT
+  },
+  comparative: {
+    type: Sequelize.FLOAT
+  },
+  tokens: {
+    type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  positive: {
+    type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  negative: {
+    type: Sequelize.ARRAY(Sequelize.STRING)
   }
 });
 
