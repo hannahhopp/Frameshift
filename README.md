@@ -48,5 +48,6 @@
 ## TO DOS ##
 >> Dream dates
 - Want to give option to change the date the dream was had.
+- Make words clickable to nav to other dreams with shared words... join table?
 
 
