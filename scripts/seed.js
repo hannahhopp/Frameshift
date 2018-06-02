@@ -1,4 +1,4 @@
-const { db, Dream } = require('../server/db');
+const { db, Dream, User } = require('../server/db');
 const dreams = require('./dreams');
 const Sentiment = require('sentiment');
 const sentiment = new Sentiment();
