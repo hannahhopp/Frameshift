@@ -6,6 +6,7 @@ const {
   LUCID,
   NIGHTMARE
 } = require('./dream');
+const User = require('./user');
 
 module.exports = {
   db,
@@ -13,5 +14,6 @@ module.exports = {
   STANDARD,
   VIVID,
   LUCID,
-  NIGHTMARE
+  NIGHTMARE,
+  User
 }
